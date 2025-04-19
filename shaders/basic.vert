@@ -1,20 +1,32 @@
 #version 330 core
 layout (location = 0) in vec3 aPos;
-layout (location = 1) in vec3 color;
+layout (location = 1) in vec2 texCoords;
 
-out vec4 fragColor;
+uniform mat4 model;
+uniform mat4 view;
+uniform mat4 projection;
+uniform vec2 texScale;
+uniform vec3 lightPos;
+uniform vec3 lightColor;
 
-//uniform mat4 model;
-//uniform mat4 view;
-//uniform mat4 projection;
-
-uniform mat4 trans;
+out vec2 fragTexCoords;
+out vec2 fragTexScales;
+out vec3 fragLightPos;
+out vec3 fragLightColor;
+out vec3 fragPos;
 
 void main()
 {
-    fragColor = vec4(color, 1.0);
+    //Send in the fragment world position, useful for lighting
+    vec4 fragWorldPos = model * vec4(aPos.xyz, 1.0);
+    fragPos = fragWorldPos.xyz;
 
-    //mat4 transformation = projection * view * model;
+    //Lighting stuff
+    fragLightPos = lightPos;
+    fragLightColor = lightColor;
 
-    gl_Position = trans * vec4(aPos.x, aPos.y, aPos.z, 1.0);
+    //Texture scaling and coords to the fragment shader
+    fragTexScales = texScale;
+    fragTexCoords = texCoords;
+    gl_Position = projection * view * model * vec4(aPos.x, aPos.y, aPos.z, 1.0);
 }
