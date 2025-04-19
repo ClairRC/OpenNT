@@ -23,6 +23,7 @@ FetchContent_MakeAvailable(glfw)
 file(GLOB_RECURSE SRC_FILES 
 	${PROJECT_SOURCE_DIR}/src/*.cpp
 	${PROJECT_SOURCE_DIR}/lib/src/*
+	${PROJECT_SOURCE_DIR}/main.cpp # Including this for now as a demo kinda deal
 )
 
 # Define library
