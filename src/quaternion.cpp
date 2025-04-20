@@ -1,3 +1,5 @@
+#include <cmath>
+
 #include "math_stuff/quaternion.h"
 
 namespace Math {

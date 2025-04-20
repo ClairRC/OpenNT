@@ -5,7 +5,7 @@
 //be stitched together due to lack of time to think it through better
 //Trust me when I say that I will fix this.
 
-#include <glfw/glfw3.h>
+#include <GLFW/glfw3.h>
 
 namespace Systems {
 	class MovementSystem {

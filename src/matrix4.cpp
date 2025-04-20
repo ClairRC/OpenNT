@@ -1,3 +1,5 @@
+#include <cmath>
+
 #include "math_stuff/matrix4.h"
 #include "math_stuff/MatrixIncorrectDimensionsException.h"
 

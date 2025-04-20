@@ -1,3 +1,5 @@
+#include <cmath>
+
 #include "math_stuff/vec.h"
 #include "math_stuff/matrix.h"
 #include "math_stuff/VectorIndexOutOfBoundsException.h"

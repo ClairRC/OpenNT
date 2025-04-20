@@ -5,6 +5,9 @@
 #include "math_stuff/MatrixUninvertibleException.h"
 #include "math_stuff/MatrixIncorrectDimensionsException.h"
 
+#include <memory>
+#include <cmath>
+
 namespace Math {
 	//Matrix stuff! :D
 
@@ -45,12 +48,6 @@ namespace Math {
 		move.size = 0;
 	}
 
-	//For better conversion between Matrix types
-	Matrix::Matrix(Matrix4&& move) noexcept 
-		: rows(4), columns(4), size(16), data(move.data)
-	{
-		move.data = nullptr;
-	}
 
 	//Destructor
 	Matrix::~Matrix() {

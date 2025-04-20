@@ -58,7 +58,6 @@ namespace Math {
 
 		//Move Constructor
 		Matrix(Matrix&& move) noexcept;
-		Matrix(Matrix4&& move) noexcept;
 
 		//Destructor
 		~Matrix();

@@ -4,6 +4,7 @@
 #include "components.h"
 #include "resource_manager/entity_manager.h"
 
+#include <memory>
 #include <iostream>
 #include <map>
 #include <unordered_map>
