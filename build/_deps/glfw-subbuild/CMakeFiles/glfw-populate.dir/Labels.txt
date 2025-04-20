@@ -1,0 +1,14 @@
+# Target labels
+ glfw-populate
+# Source files and their labels
+C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate
+C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/36b743838c7d168acd618399d5d04ee6/glfw-populate.rule
+C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/ed85c55ac3e13d1a1d587efa2d24b51b/glfw-populate-complete.rule
+C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-build.rule
+C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-configure.rule
+C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-download.rule
+C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-install.rule
+C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-mkdir.rule
+C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-patch.rule
+C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-test.rule
+C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-update.rule

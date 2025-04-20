@@ -1,0 +1,46 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/glfw-populate"
+		},
+		{
+			"file" : "C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/36b743838c7d168acd618399d5d04ee6/glfw-populate.rule"
+		},
+		{
+			"file" : "C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/ed85c55ac3e13d1a1d587efa2d24b51b/glfw-populate-complete.rule"
+		},
+		{
+			"file" : "C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-build.rule"
+		},
+		{
+			"file" : "C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-configure.rule"
+		},
+		{
+			"file" : "C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-download.rule"
+		},
+		{
+			"file" : "C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-install.rule"
+		},
+		{
+			"file" : "C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-mkdir.rule"
+		},
+		{
+			"file" : "C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-patch.rule"
+		},
+		{
+			"file" : "C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-test.rule"
+		},
+		{
+			"file" : "C:/Users/Claire/Stuff/praccy_waccy/build/_deps/glfw-subbuild/CMakeFiles/5cec9442110f52b6b864284a56877c72/glfw-populate-update.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"glfw-populate"
+		],
+		"name" : "glfw-populate"
+	}
+}

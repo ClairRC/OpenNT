@@ -11,13 +11,13 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include (FetchContent)
 
 FetchContent_Declare(
-    GLFW
+    glfw
     GIT_REPOSITORY https://github.com/glfw/glfw
     GIT_TAG 3.3.10
 )
 
 # Builds CMake target I think?? I need to do a deeper dive into this
-FetchContent_MakeAvailable(GLFW)
+FetchContent_MakeAvailable(glfw)
 
 # Define source file paths
 file(GLOB_RECURSE SRC_FILES 
@@ -39,5 +39,5 @@ target_include_directories(OpenNT PUBLIC
 find_package(OpenGL REQUIRED)
 target_link_libraries(OpenNT PUBLIC
     OpenGL::GL
-    GLFW
+    glfw
 )
