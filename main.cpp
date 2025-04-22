@@ -102,7 +102,7 @@ int main() {
 
 	//Create components
 	LightSourceComponent light;
-	light.lightColor = Vec3(1, 0.7, 0.3);
+	light.lightColor = Vec3(1, 0.0, 0.0);
 	light.lightPos = Vec3(0.0, 2.0, 0.0);
 
 	//Add compnents
