@@ -13,6 +13,8 @@
 * Second, this is will get run every frame, which I guess is actually not an issue cuz the lighting can change,
 * but it can still be costly if I expand too much. I'm still not sure how updating the position will work.
 * That will likely be yet another band-aid fix that will have to change, but ya we'll see.
+*
+* TODO: literally just rework this entire system
 */
 namespace Systems {
 	class LightingSystem {

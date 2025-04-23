@@ -1,36 +1,41 @@
+
 # ✨OpenNT✨ (thank you gamut)
 
 
-This is an OpenGL project that I am creating to just mess around with and hopfully turn into something cool! Whether that ends up being a super basic game, somthing bigger, or not even a game at all is still yet to be decided. 
+This is a game engine project that I am doing in order to really figure out how that stuff works under the hood.
 
-This repository is primarily to track my own progress as well as organize my thoughts about it. 
+It is currently very much a work in progress.
 
-If you'd like to keep up with my OpenGL improvement, then this is where I'll be putting it until it becomes something bigger (if it ever does)!
+### Current Features
 
-### Goals (Expect to change)
+* Simple abstractions for rendering, lighting, input handling, and resource management
 
-* Create a game/game engine/render engine (something along those lines)
+* Simple ECS architecture in place the FOUNDATION is there
 
-* Implement the math myself without the help of any math libraries like GLM
+* Custom math libraries. For fun!
 
-* Gain a general understanding of how rendering and game development works
+### TODO
 
-* Use my own assets including textures and models (and maybe sounds?)
+* Refactor the systems that currently exist for better organization
 
-* Gain a more advanced understanding of GLSL
+* Allow 3D models
 
-* Become proficient in C++
+* Better handling of resources
 
-### TODO (in no particular order)
+* Custom scripting
 
-* Learn CMake and create a CMake file for this project
+* The list goes on... and on... Like I said it's just a start!
 
-* Generally better efficiency (eg. use shallow copies instead of deep copies to reduce number of operations, more efficient math algorithms)
+### How to Use
+A CMake file is included, so you just have to run CMake and it will build the project for you. From there, main.cpp exists just as a demo, but anything put in main() and gameLoop() will be processed still.
 
-* Create model/mesh abstractions so I don't have to deal with all the VAO and model matrix math every draw call
+Currently, this isn't good for too much more than messing around. But hey, I think it's kinda cool still :)
 
-* More advanced shaders and implement simple lighting (currently going with a 2.5D style, so learn how to use normal mapping?)
+### Dependencies
 
-* Create a resource management system
+* GLAD
+* stb_images
+* GLFW
 
-* Accept user input and a moveable camera
+The first two are already included as they are header only, and GLFW gets downloaded with CMake, so it shouldn't be difficult to set up.
+

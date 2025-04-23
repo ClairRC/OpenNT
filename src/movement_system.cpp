@@ -3,6 +3,13 @@
 #include "components.h"
 #include "resource_manager.h"
 
+/*
+* LITERAL GARBAGE!! USELESS!!!!!!!!!!!!!
+* This is very much just here to say that I have inputs so people dont make fun of me
+* when i have to show a prototype... Kinda necessary for a game engine, but this is
+* very much NOT a good class to go off of if you're looking for "software engineering principles"
+*/
+
 namespace Systems {
 	void MovementSystem::processMovement(GLFWwindow* window) {
 		//Get list of entities

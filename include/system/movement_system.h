@@ -3,7 +3,7 @@
 
 //Okay let me be so for real with you, this whole movement system is going to
 //be stitched together due to lack of time to think it through better
-//Trust me when I say that I will fix this.
+//I would like to have better abstractions here with a system for event handling
 
 #include <GLFW/glfw3.h>
 

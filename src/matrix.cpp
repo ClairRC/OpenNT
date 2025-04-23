@@ -190,9 +190,13 @@ namespace Math {
 	}
 
 	//Matrix Multiplication
-	//I'll be honest, I wrote this function like a month ago and i have no idea how I got to this conclusion.
-	//I was probably drunk or something. But it works so I am not looking a gift horse in the mouth.
 	Matrix Matrix::operator*(const Matrix& other) const {
+		/*
+		* This matrix multiplication is inefficient and bad.
+		* I MIGHT implement Strassen's algorithm for this for the 
+		* IMPECCABLE speedup from O(n^3) to O(n^2.83), but I think I'll live for now.
+		*/
+		
 		if (this->columns != other.rows)
 			throw MatrixIncorrectDimensionsException();
 
@@ -282,6 +286,12 @@ namespace Math {
 	//Reduced Row Echelon.
 	//This goes column by column to find the pivot and reduce the row.
 	Matrix::rowReductionResults Matrix::toReducedREF() const {
+		//Not sure sure why I spend so much time and brain power
+		//relearning how all of this works. It is better for finding matrix determinant
+		//and thus its inverse and all that fun stuff, but for now it is NOT necessary.
+		//I believe this kind of calculation will come far more in handy if I deal with
+		//post processing stuff, but even then who knows.
+
 		rowReductionResults matrix = this->toREFResults();
 		int numRows = this->rows;
 		int numColumns = this->columns;

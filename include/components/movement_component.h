@@ -6,6 +6,8 @@
 
 //Very band-aid and rushed hard-coding approach to movement
 //But thats because I'm running out of time. I will fix this in the future.
+//I think ideally I will implement event-handling for movement which will
+//also provide much more customizability.
 namespace Resources {
 	//Movement component to decide if something moves when the arrow keys are pressed'
 	struct MovementComponent : IComponent {

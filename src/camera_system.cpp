@@ -49,7 +49,7 @@ namespace Systems {
 		Math::Vec3& entityPos = entityPosComp.position;
 		
 		//Sets camera's position
-		//Debatably doing this math every time is problematic, buuut right now I'm just going with waht works. 
+		//Doing this math every time is problematic, buuut right now I'm just going with waht works. 
 		//I'll refactor later...
 		this->absolutePosition = entityPos + this->relativePosition;
 

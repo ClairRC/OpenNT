@@ -14,7 +14,7 @@ namespace Math {
 	* is scary with memory management, so no need to make that worse, plus I don't really
 	* gain anything since I'm not really inheriting anything useful or overriding anything.
 	* Plus being able to enforce Vec3/4 will trade runtime errors for compiler errors
-	* which I think is definitely advantageos.
+	* which I think is ideal here.
 	*/
 	class Vec3 {
 	//Private members

@@ -1,8 +1,3 @@
-/*
-* This source file holds the main function, it deals with pre-game loop and post-game loop stuff, it handles GLFW and GLAD stuff
-* This is mostly just setup stuff.
-*/
-
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include <iostream>
@@ -13,6 +8,16 @@
 #define WIDTH 800
 #define HEIGHT 600
 #define NAME "expreli"
+/*
+* I was REALLY not sure what to do here.
+* I forward declared a gameLoop function to abstract the render loop I have at the bottom, but 
+* this means that you must include a void gameLoop() in main that gets called every frame.
+* I don't think there is really anything wrong with that, but that's what I did. Other than that,
+* this class sets up the initial things that you need, and holds the render loop which updates
+* logic or rendering or whatever else each frame.
+*
+* TODO: Better customizability, probably better error handling, things like that.
+*/
 
 void gameLoop();
 

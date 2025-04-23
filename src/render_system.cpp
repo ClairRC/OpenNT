@@ -7,9 +7,8 @@
 #include "resources.h"
 #include "system/lighting_system.h"
 
-//This whole system is a god damn mess and I need to fix it desparately
-//I do not think you understand the mental breakdown that the organization of this
-//garbage is giving me.
+//I have to completely rework this.
+
 namespace Systems {
 	//Define managers
 	//For now these are being stored as static values because they are all pointing to the same managers, 

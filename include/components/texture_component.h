@@ -6,9 +6,9 @@
 namespace Resources {
 	//Component that stores information for textures
 	struct TextureComponent : IComponent {
-		//I should probably also have things like.. texture coordinates and all that
-		//But for now I'm going with the basic case and assuming the texture coords will be at the corners
-		//Which might be a bad assumption.
+		//There is a significant amount of texture customization options that I should
+		//include here, but because I need a prototype by uhhh yesterday, I am
+		//keeping it simple and general
 		std::string name;
 	};
 }

@@ -8,6 +8,7 @@
 * that are undefined for that operation. Includes things like addition requiring both matrices to be the same size,
 * determinant requiring matrix to be square, multiplcation requiring the first matrices columns to equal the second's rows, etc.
 */
+
 namespace Math {
 	class MatrixIncorrectDimensionsException : public std::exception {
 	

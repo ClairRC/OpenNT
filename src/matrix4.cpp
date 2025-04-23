@@ -38,6 +38,7 @@ namespace Math {
 	}
 
 	//Used for inexpensive conversion from generic matrix to 4x4 matrix
+	//Incredibly useless as well as far as I'm aware.
 	Matrix4::Matrix4(Matrix&& move) {
 		if (move.getColumns() != 4 || move.getRows() != 4)
 			throw MatrixIncorrectDimensionsException();
@@ -128,8 +129,13 @@ namespace Math {
 		return out;
 	}
 
-	//It's called efficiency
 	Matrix4 Matrix4::operator*(const Matrix4& other) const {
+		//Say what you want but this is the most efficient way to do this,
+		//and 4x4 matrices are multiplied SO frequently that the extra efficiency
+		//is something I'm willing to take at the cost of this looking nice at all.
+		//O(n*m) (n and m being 4 here of course..) 
+		//which is a step up even from Strassen's algorithm.
+
 		Matrix4 out;
 		const float* a = this->data;
 		const float* b = other.data;
@@ -161,9 +167,6 @@ namespace Math {
 
 		return out;
 	}
-
-	//TODO 
-	//Maybe hardcode this for a LIL extra speed if I find I'm using it often
 
 	//This multiples the matrix by the vector
 	//Since the return is Vec4, I thoughta bout putting this in the Vec4 class, buuut
@@ -235,14 +238,6 @@ namespace Math {
 		const float y = std::sin(angle / 2.0) * axis.y();
 		const float z = std::sin(angle / 2.0) * axis.z();
 
-		//Accidentally put row major but keeping it just in case
-		/*const float data[16] = {
-			1.0 - 2.0*y*y - 2.0*z*z, 2.0*x*y - 2.0*s*z, 2.0*x*z + 2.0*s*y, 0,
-			2.0*x*y + 2.0*s*z, 1.0 - 2.0*x*x - 2.0*z*z, 2.0*y*z - 2.0*s*x, 0,
-			2.0*x*z - 2.0*s*y, 2.0*y*z + 2.0*s*x, 1.0 - 2.0*x*x - 2.0*y*y, 0,
-			0, 0, 0, 1
-		};*/
-
 		const float data[16] = {
 			1.0 - 2.0*y*y - 2.0*z*z, 2.0*x*y + 2.0*s*z, 2.0*x*z - 2.0*s*y, 0,
 			2.0*x*y - 2.0*s*z, 1 - 2.0*x*x - 2.0*z*z, 2.0*y*z + 2.0*s*x, 0,
@@ -294,11 +289,6 @@ namespace Math {
 						cameraRight.y(), cameraUp.y(), -cameraFront.y(), 0,
 						cameraRight.z(), cameraUp.z(), -cameraFront.z(), 0,
 						-cameraRight.dot(cameraPosition), -cameraUp.dot(cameraPosition), cameraFront.dot(cameraPosition), 1 };
-		
-		/*float dat[16] = {cameraRight.x(), cameraRight.y(), cameraRight.z(), -cameraRight.dot(cameraPosition),
-						cameraUp.x(), cameraUp.y(), cameraUp.z(), -cameraUp.dot(cameraPosition), 
-						-cameraFront.x(), -cameraFront.y(), -cameraFront.z(), cameraFront.dot(cameraPosition),
-						0, 0, 0, 1};*/
 
 		return Matrix4(dat);
 	}
@@ -307,18 +297,13 @@ namespace Math {
 		//I found this math from here http://www.songho.ca/opengl/gl_projectionmatrix.html
 		//I am not yet sure if this will change based on other things but for now im just going simple.
 
+		//TODO: make these less hardcode-y
 		float n = 0.01;
 		float t = n * std::tan(1.5/2.0);
 		float b = -1 * t;
 		float r = t * 6.0/8.0;
 		float l = -1 * r;
 		float f = 1000;
-
-		//Row major reprentation cuz I'm a goofy dumbass
-		/*float dat[16] = {(2.0 * n) / (r - l), 0, (r + l) / (r - l), 0,
-						0, (2.0 * n) / (t - b), (t + b) / (t - b), 0,
-						0, 0, (-1.0 * (f + n)) / (f - n), (-2.0 * f * n) / (f - n),
-						0, 0, -1, 0 };*/
 
 		float dat[16] = {(2.0 * n) / (r - l), 0, 0, 0,
 				0, (2.0 * n)/(t - b), 0, 0,

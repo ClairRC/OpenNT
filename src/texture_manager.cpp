@@ -12,6 +12,7 @@
 #include "stb_image/stb_image.h" //Library for getting image data
 
 //This garbage is not even remotely done or well organized.
+//This is another "just thrown together for a prototype" class.
 //Woopsie daisy!
 namespace ResourceManager {
 	TextureManager* TextureManager::instance = nullptr;

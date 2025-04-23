@@ -11,6 +11,12 @@ namespace Math {
 
 	//4x4 matrix class
 	//Primarily for safety so I can enforce the size and all that. Plus I'm dealing with these mosto f the time
+	//TODO: Check for memory management issues and implement move semantics (better)
+
+	/*
+	* I was initially going to make this a subclass for my regular matrix, but I think the
+	* use cases are specific enough that it didnt make much sense.
+	*/
 	class Matrix4 {
 	//Private members
 	private:
@@ -30,7 +36,7 @@ namespace Math {
 
 		//Move Constructors
 		Matrix4(Matrix4&& move) noexcept;
-		Matrix4(Matrix&& move);
+		Matrix4(Matrix&& move); //Pretty sure I deleted this but im keeping this line just in case for nwo
 
 		//Destructor
 		~Matrix4();

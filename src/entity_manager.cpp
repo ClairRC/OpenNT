@@ -18,8 +18,8 @@ namespace ResourceManager {
 		return instance;
 	}
 
-	//I am going to have this overwrite if two entities use the same name...
 	void EntityManager::createEntity(std::string name) {
+		//I am going to have this overwrite if two entities use the same name for now
 		if (this->entityList.count(name) > 0) {
 			//TODO!!
 			//If entity gets overwritten it needs to have its components deleted!
@@ -33,6 +33,7 @@ namespace ResourceManager {
 	//Returns the ID of an entity given the string
 	unsigned int EntityManager::getEntityID(std::string name) {
 		//If entity name isn't found, return -1
+		//Dumb inconsistent handling of errors!!!!!! my code sucks!!!!
 		if (this->entityList.count(name) == 0)
 			return -1;
 

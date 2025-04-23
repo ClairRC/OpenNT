@@ -13,7 +13,10 @@ namespace Systems {
 	* but I'll cross that bridge when I get there. For now, this will follow 1 entity that is presumed to be the 
 	* player character, and however that moves the camera SHOULD follow.
 	* 
-	* Debatably this shouldn't be lumped with the "systems", but I'll keep it here for now. It doesn't really matter anyway
+	* TODO:
+	* This shouldn't be lumped with the "systems", but I'll keep it here for now. It doesn't really matter anyway
+	* This is also kind of a weird way to define a camera. The camera is nothing more than a position and direction,
+	* but I could probably implement this in a less confusing way. It works for now though.
 	*/
 	class CameraSystem {
 	private:

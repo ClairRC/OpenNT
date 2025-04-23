@@ -11,8 +11,9 @@ namespace Math {
 
 	//Private fields
 	private:
-		//I was considering using smart pointers, but since I'm mostly using this for OpenGL, 
-		//I think raw pointer are nicer. Plus I want to create a deep copy which is so annoying with smart pointers.
+		//I implemented most of my math classes to deal with raw pointers rather than
+		//smart pointers. This is less safe, but since OpenGL needs the raw pointers, it
+		//makes everything so much more convenient, so I was careful with memory leaks. 
 		size_t size;
 		float* data;
 

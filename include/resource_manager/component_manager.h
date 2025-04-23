@@ -11,6 +11,14 @@
 #include <typeindex>
 #include <typeinfo>
 
+
+/*
+* TODO:
+* So a LOT of my classes are implemented as a singleton which is kind of a mess for
+* global resource management. I would like to change this so that these things are more specific
+* for different scenes, which will make resource deletion and aquisition and caching so much
+* more convenient. This applies to nearly (but not all) of my singleton classes
+*/
 namespace ResourceManager {
 	class ComponentManager {
 	private:
@@ -57,6 +65,7 @@ namespace ResourceManager {
 			this->storages[tType] = std::make_unique<ComponentStorage<T>>();
 		}
 
+		//Not sure exactly how static/dynamic casting works, but I'm going with it
 		return *static_cast<ComponentStorage<T>*>(this->storages[tType].get());
 	}
 

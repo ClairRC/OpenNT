@@ -7,8 +7,10 @@
 #include "math_stuff/matrix4.h"
 
 namespace Math {
+	//TODO:
+	//Implement move semantics for more efficient memory management
 	class Matrix {
-	//Private garbafe
+	//Private members
 	private: 
 		int rows;
 		int columns;

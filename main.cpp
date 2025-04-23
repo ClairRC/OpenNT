@@ -10,6 +10,10 @@ ComponentManager* componentManager = ComponentManager::getComponentManager();
 CameraSystem* cameraSystem = CameraSystem::getCameraSystem();
 TextureManager* textureManager = TextureManager::getTextureManager();
 
+//This isn't actually apart of the "engine", it's really just here
+//for the sake of a demonstration. Things that happen in void gameLoop() will happen
+//every frame
+
 int main() {
 	//Sets texture path
 	textureManager->setTextureFolderPath("../textures");
