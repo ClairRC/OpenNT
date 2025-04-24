@@ -37,24 +37,20 @@ void testCrossProduct() {
 
 int main() {
     printf("Testing Addition\n");
-
     testAdd();
-
     printf("Addition Passed\n\n");
 
     printf("Testing Scalar Multiplication\n");
-
     testScalarMultiplication();
-
     printf("Scalar Multiplication Passed\n\n");
 
     printf("Testing Cross Product\n");
-
     testCrossProduct();
-
     printf("Cross Product Passed\n\n");
 
     printf("All tests passed!\n");
+
+    return 0;
 }
 
 //This will literally break everything if i don't include it
